@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/actNfcConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NfcAcceso">
+
+    <ImageView
+        android:id="@+id/actNfcImageViewFondo"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="-170dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-170dp"
+        android:background="@drawable/imageview_redondeado"
+        android:backgroundTint="#4067FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/actNfcRadioGroupVincular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actNfcImageViewFondo">
+
+        <RadioButton
+            android:id="@+id/actNfcRadioButtonVincular"
+            style="@style/radioButton_checked_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/vincular_etiqueta"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/actNfcRadioButtonDesvincular"
+            style="@style/radioButton_unchecked_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vaciar_etiqueta"
+            android:textAlignment="center" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/actNfcTextViewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/days_one"
+        android:text="@string/acerca_etiqueta"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/actNfcImageViewFondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/actNfcImageViewGif"
+        android:layout_width="400dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actNfcRadioGroupVincular" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

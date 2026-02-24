@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/actPrincipalGrupoConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="descripcion"
+    tools:context=".grupo.PrincipalGrupo">
+
+    <ImageView
+        android:id="@+id/actPrincipalGrupoImageViewFondo"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="-170dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-170dp"
+        android:background="@drawable/imageview_redondeado"
+        android:backgroundTint="@color/blue_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/actPrincipalGrupoImageViewRfidAnadir"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="onClickNfc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_rfid_icono" />
+
+    <TextView
+        android:id="@+id/actPrincipalGrupoTextViewRfidAnadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/days_one"
+        android:onClick="onClickNfc"
+        android:text="@string/registrar_etiqueta"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/actPrincipalGrupoImageViewRfidAnadir"
+        app:layout_constraintEnd_toStartOf="@+id/actPrincipalGrupoImageViewRfidAnadir"
+        app:layout_constraintTop_toTopOf="@+id/actPrincipalGrupoImageViewRfidAnadir" />
+
+    <ImageView
+        android:id="@+id/actPrincipalGrupoImageViewNotificaciones"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onClickNotificaciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_notificacion" />
+
+    <TextView
+        android:id="@+id/actPrincipalGrupoTextViewNombreGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/days_one"
+        android:text="Nombre de grupo"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalGrupoImageViewRfidAnadir" />
+
+    <ImageView
+        android:id="@+id/actPrincipalGrupoImageViewEditarNombreGrupo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:onClick="onClickEditarNombreGrupo"
+        app:layout_constraintBottom_toBottomOf="@+id/actPrincipalGrupoTextViewNombreGrupo"
+        app:layout_constraintStart_toEndOf="@+id/actPrincipalGrupoTextViewNombreGrupo"
+        app:layout_constraintTop_toTopOf="@+id/actPrincipalGrupoTextViewNombreGrupo"
+        app:srcCompat="@drawable/img_boton_editar"
+        app:tint="@color/red" />
+
+    <TextView
+        android:id="@+id/actPrincipalGrupoTextViewDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/days_one"
+        android:text="Descripción"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalGrupoTextViewNombreGrupo" />
+
+    <ImageView
+        android:id="@+id/actPrincipalGrupoImageViewEditarDescripcion"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:onClick="onClickEditarDescripcionGrupo"
+        app:layout_constraintBottom_toBottomOf="@+id/actPrincipalGrupoTextViewDescripcion"
+        app:layout_constraintStart_toEndOf="@+id/actPrincipalGrupoTextViewDescripcion"
+        app:layout_constraintTop_toTopOf="@+id/actPrincipalGrupoTextViewDescripcion"
+        app:srcCompat="@drawable/img_boton_editar"
+        app:tint="@color/red" />
+
+    <TextView
+        android:id="@+id/actPrincipalGrupoTextViewHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/days_one"
+        android:text="Horario"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalGrupoTextViewDescripcion" />
+
+    <RadioGroup
+        android:id="@+id/actPrincipalGrupoRadioGroupFragmentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalGrupoImageViewFondo">
+
+        <RadioButton
+            android:id="@+id/actPrincipalGrupoRadioButtonMiembros"
+            style="@style/radioButton_checked_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/ver_miembros"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/actPrincipalGrupoRadioButtonCalendario"
+            style="@style/radioButton_unchecked_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ver_calendario"
+            android:textAlignment="center" />
+
+    </RadioGroup>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/actPrincipalGrupoFragmentContainerViewMiembros"
+        android:name="com.example.shifttracker.grupo.FragmentoMiembros"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalGrupoRadioGroupFragmentos"
+        tools:layout="@layout/fragment_miembros" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/actPrincipalGrupoFragmentContainerViewCalendario"
+        android:name="com.example.shifttracker.grupo.FragmentoCalendario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalGrupoRadioGroupFragmentos"
+        tools:layout="@layout/fragment_calendario" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

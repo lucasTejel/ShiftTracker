@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-sdk android:minSdkVersion="29" />
+    <uses-feature android:name="android.hardware.nfc" android:required="false" />
+
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShiftTracker"
+        tools:targetApi="31">
+        <activity
+            android:name=".NfcAcceso"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        <intent-filter>
+            <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+
+            <data android:mimeType="text/plain" />
+        </intent-filter>
+        <intent-filter>
+            <action android:name="android.nfc.action.TECH_DISCOVERED" />
+        </intent-filter>
+
+        <meta-data
+            android:name="android.nfc.action.TECH_DISCOVERED"
+            android:resource="@xml/nfc_tech_filter" />
+
+        </activity>
+        <activity
+            android:name=".Notificaciones"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".grupo.PrincipalGrupo"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PrincipalAplicacion"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.IniciarSesion"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.Registrarse"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.Bienvenida"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+
+
+</manifest>

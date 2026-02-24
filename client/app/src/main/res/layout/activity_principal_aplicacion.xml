@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/actPrincipalLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrincipalAplicacion">
+
+    <ImageView
+        android:id="@+id/actPrincipalImageViewFondo"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="-170dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-170dp"
+        android:background="@drawable/imageview_redondeado"
+        android:backgroundTint="#4067FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/actPrincipalImageViewRfidCerrarSesion"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="onClickCerrarSesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_cerrar_sesion_icono" />
+
+    <TextView
+        android:id="@+id/actPrincipalTextViewCerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/days_one"
+        android:onClick="onClickCerrarSesion"
+        android:text="@string/cerrar_sesion"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/actPrincipalImageViewRfidCerrarSesion"
+        app:layout_constraintTop_toTopOf="@+id/actPrincipalImageViewRfidCerrarSesion" />
+
+    <ImageView
+        android:id="@+id/actPrincipalImageViewNotificaciones"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onClickNotificaciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_notificacion" />
+
+    <TextView
+        android:id="@+id/actPrincipalTextViewNombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/days_one"
+        android:text="Nombre de usuario"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalImageViewRfidCerrarSesion" />
+
+    <ImageView
+        android:id="@+id/actPrincipalImageViewEditarNombreUsuario"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:onClick="onClickEditarNombreUsuario"
+        app:layout_constraintBottom_toBottomOf="@+id/actPrincipalTextViewNombreUsuario"
+        app:layout_constraintStart_toEndOf="@+id/actPrincipalTextViewNombreUsuario"
+        app:layout_constraintTop_toTopOf="@+id/actPrincipalTextViewNombreUsuario"
+        app:srcCompat="@drawable/img_boton_editar"
+        app:tint="@color/red" />
+
+    <TextView
+        android:id="@+id/actPrincipalTextViewCargoEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/days_one"
+        android:text="Cargo/estado"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalTextViewNombreUsuario" />
+
+    <ImageView
+        android:id="@+id/actPrincipalImageViewEditarCargo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        app:tint="@color/red"
+        app:srcCompat="@drawable/img_boton_editar"
+        android:onClick="onClickEditarCargo"
+        app:layout_constraintBottom_toBottomOf="@+id/actPrincipalTextViewCargoEstado"
+        app:layout_constraintStart_toEndOf="@+id/actPrincipalTextViewCargoEstado"
+        app:layout_constraintTop_toTopOf="@+id/actPrincipalTextViewCargoEstado" />
+
+    <TextView
+        android:id="@+id/actPrincipalTextViewListadoGrupos"
+        style="@style/texto_color_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/listado_grupos"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalImageViewFondo" />
+
+    <ListView
+        android:id="@+id/actPrincipalListViewGrupos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/actPrincipalButtonNuevoGrupo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalTextViewListadoGrupos">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/actPrincipalButtonNuevoGrupo"
+        style="@style/boton_blanco_negro"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/lexend_medium"
+        android:onClick="onClickNuevoGrupo"
+        android:text="@string/nuevo_grupo"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

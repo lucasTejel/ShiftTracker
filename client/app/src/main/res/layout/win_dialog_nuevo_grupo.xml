@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/winDialogNuevoGrupoLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/winDialogNuevoGrupoCardView"
+        style="@style/ventana_dialogo_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/winDialogNuevoGrupoCardViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/img_fondo">
+
+            <ImageView
+                android:id="@+id/winDialogNuevoGrupoImageViewCerrar"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="onClickCerrar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_boton_cerrar"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/winDialogNuevoGrupoTextViewCambiarDescripcionGrupo"
+                style="@style/titulo_blanco"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:text="@string/nuevo_grupo"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/winDialogNuevoGrupoTextInputLayoutNombre"
+                style="@style/TextInputLayoutBlancoTextoAzul"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:hint="@string/nombre_de_grupo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogNuevoGrupoTextViewCambiarDescripcionGrupo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/winDialogNuevoGrupoTextInputEditTextNombre"
+                    style="@style/TextInputEditTextBlancoTextoAzul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/days_one"
+                    android:inputType="text"
+                    android:maxLength="50" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/winDialogNuevoGrupoTextInputLayoutDescripcion"
+                style="@style/TextInputLayoutBlancoTextoAzul"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="50dp"
+                android:hint="@string/descripcion_del_grupo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogNuevoGrupoTextInputLayoutNombre">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/winDialogNuevoGrupoTextInputEditTextDescripcion"
+                    style="@style/TextInputEditTextBlancoTextoAzul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/days_one"
+                    android:inputType="text"
+                    android:maxLength="50" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/winDialogNuevoGrupoTextViewHorario"
+                style="@style/titulo_blanco"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:text="@string/horario"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/winDialogNuevoGrupoTextInputLayoutDescripcion"
+                app:layout_constraintStart_toStartOf="@+id/winDialogNuevoGrupoTextInputLayoutDescripcion"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogNuevoGrupoTextInputLayoutDescripcion" />
+
+            <CheckBox
+                android:id="@+id/winDialogNuevoGrupoCheckBoxLun"
+                style="@style/checkBox_unchecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/lun"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogNuevoGrupoTextViewHorario" />
+
+            <CheckBox
+                android:id="@+id/winDialogNuevoGrupoCheckBoxMar"
+                style="@style/checkBox_unchecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/winDialogNuevoGrupoCheckBoxLun" />
+
+            <CheckBox
+                android:id="@+id/winDialogNuevoGrupoCheckBoxMie"
+                style="@style/checkBox_unchecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mie"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/winDialogNuevoGrupoCheckBoxLun" />
+
+            <CheckBox
+                android:id="@+id/winDialogNuevoGrupoCheckBoxJue"
+                style="@style/checkBox_unchecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/winDialogNuevoGrupoCheckBoxMie" />
+
+            <CheckBox
+                android:id="@+id/winDialogNuevoGrupoCheckBoxVie"
+                style="@style/checkBox_unchecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vie"
+                app:layout_constraintEnd_toEndOf="@+id/winDialogNuevoGrupoCheckBoxMar"
+                app:layout_constraintStart_toStartOf="@+id/winDialogNuevoGrupoCheckBoxLun"
+                app:layout_constraintTop_toTopOf="@+id/winDialogNuevoGrupoCheckBoxSab" />
+
+            <CheckBox
+                android:id="@+id/winDialogNuevoGrupoCheckBoxSab"
+                style="@style/checkBox_unchecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sab"
+                app:layout_constraintEnd_toEndOf="@+id/winDialogNuevoGrupoCheckBoxMie"
+                app:layout_constraintStart_toStartOf="@+id/winDialogNuevoGrupoCheckBoxMar"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogNuevoGrupoCheckBoxLun" />
+
+            <CheckBox
+                android:id="@+id/winDialogNuevoGrupoCheckBoxDom"
+                style="@style/checkBox_unchecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dom"
+                app:layout_constraintEnd_toEndOf="@+id/winDialogNuevoGrupoCheckBoxJue"
+                app:layout_constraintStart_toStartOf="@+id/winDialogNuevoGrupoCheckBoxMie"
+                app:layout_constraintTop_toTopOf="@+id/winDialogNuevoGrupoCheckBoxSab" />
+
+            <TextView
+                android:id="@+id/winDialogNuevoGrupoTextViewInicio"
+                style="@style/titulo_blanco"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:onClick="desplegarTimePicker"
+                android:text="@string/inicio"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/winDialogNuevoGrupoTextViewInicioHora"
+                app:layout_constraintEnd_toStartOf="@+id/winDialogNuevoGrupoTextViewInicioHora" />
+
+            <TextView
+                android:id="@+id/winDialogNuevoGrupoTextViewInicioHora"
+                style="@style/titulo_blanco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="desplegarTimePicker"
+                android:text="00:00"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/winDialogNuevoGrupoCheckBoxMar"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogNuevoGrupoCheckBoxSab" />
+
+            <TextView
+                android:id="@+id/winDialogNuevoGrupoTextViewFin"
+                style="@style/titulo_blanco"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="desplegarTimePicker"
+                android:text="@string/fin"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/winDialogNuevoGrupoTextViewFinHora"
+                app:layout_constraintStart_toStartOf="@+id/winDialogNuevoGrupoCheckBoxMie" />
+
+            <TextView
+                android:id="@+id/winDialogNuevoGrupoTextViewFinHora"
+                style="@style/titulo_blanco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:onClick="desplegarTimePicker"
+                android:text="23:59"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/winDialogNuevoGrupoTextViewFin"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogNuevoGrupoCheckBoxSab" />
+
+            <Button
+                android:id="@+id/winDialogNuevoGrupoButtonAceptar"
+                style="@style/boton_blanco"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/lexend_medium"
+                android:text="@string/aceptar"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogNuevoGrupoTextViewInicioHora" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

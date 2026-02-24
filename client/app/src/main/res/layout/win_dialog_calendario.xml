@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/winDialogCalendarioLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/winDialogCalendarioCardView"
+        style="@style/ventana_dialogo_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/winDialogCalendarioCardViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/img_fondo">
+
+            <ImageView
+                android:id="@+id/winDialogCalendarioImageViewCerrar"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_boton_cerrar"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/winDialogCalendarioTextViewMensaje"
+                style="@style/titulo_blanco"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:text="@string/calendario"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/winDialogCalendarioMaterialCalendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scaleX=".9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogCalendarioTextViewMensaje"
+                app:mcv_arrowColor="@color/white"
+                app:mcv_dateTextAppearance="@style/titulo_blanco"
+                app:mcv_firstDayOfWeek="monday"
+                app:mcv_headerTextAppearance="@style/titulo_blanco"
+                app:mcv_selectionColor="@color/blue_app"
+                app:mcv_showOtherDates="out_of_range"
+                app:mcv_showWeekDays="false"
+                app:mcv_tileHeight="40dp"
+                app:mcv_weekDayTextAppearance="@style/titulo_blanco" />
+
+            <ImageView
+                android:id="@+id/winDialogCalendarioImageViewLeyendaVerde"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogCalendarioMaterialCalendarView"
+                app:srcCompat="@drawable/fondo_redondo_verde" />
+
+            <TextView
+                android:id="@+id/winDialogCalendarioTextViewLeyendaVerde"
+                style="@style/titulo_blanco"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:text="@string/asistencia"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/winDialogCalendarioImageViewLeyendaVerde"
+                app:layout_constraintStart_toEndOf="@+id/winDialogCalendarioImageViewLeyendaVerde"
+                app:layout_constraintTop_toTopOf="@+id/winDialogCalendarioImageViewLeyendaVerde" />
+
+            <ImageView
+                android:id="@+id/winDialogCalendarioImageViewLeyendaNaranja"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogCalendarioImageViewLeyendaVerde"
+                app:srcCompat="@drawable/fondo_redondo_naranja" />
+
+            <TextView
+                android:id="@+id/winDialogCalendarioTextViewLeyendaNaranja"
+                style="@style/titulo_blanco"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:text="@string/vacaciones"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/winDialogCalendarioImageViewLeyendaNaranja"
+                app:layout_constraintStart_toEndOf="@+id/winDialogCalendarioImageViewLeyendaNaranja"
+                app:layout_constraintTop_toTopOf="@+id/winDialogCalendarioImageViewLeyendaNaranja" />
+
+            <ImageView
+                android:id="@+id/winDialogCalendarioImageViewLeyendaAzul"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/winDialogCalendarioImageViewLeyendaNaranja"
+                app:srcCompat="@drawable/fondo_redondo_azul" />
+
+            <TextView
+                android:id="@+id/winDialogCalendarioTextViewLeyendaAzul"
+                style="@style/titulo_blanco"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:text="@string/festivo"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/winDialogCalendarioImageViewLeyendaAzul"
+                app:layout_constraintStart_toEndOf="@+id/winDialogCalendarioImageViewLeyendaAzul"
+                app:layout_constraintTop_toTopOf="@+id/winDialogCalendarioImageViewLeyendaAzul" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

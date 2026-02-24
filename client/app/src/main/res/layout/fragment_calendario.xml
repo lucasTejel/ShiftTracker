@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/actPrincipalGrupoConstraintLayoutCalendario"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".grupo.FragmentoCalendario">
+
+    <TextView
+        android:id="@+id/actPrincipalGrupoTextViewCalendario"
+        style="@style/texto_color_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/calendario"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/winDialogCalendarioMaterialCalendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/actPrincipalGrupoButtonNuevoFestivo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actPrincipalGrupoTextViewCalendario"
+        app:mcv_arrowColor="@color/blue_app"
+        app:mcv_dateTextAppearance="@style/texto_color_normal"
+        app:mcv_firstDayOfWeek="monday"
+        app:mcv_headerTextAppearance="@style/texto_color_normal"
+        app:mcv_selectionColor="@color/blue_app"
+        app:mcv_showOtherDates="out_of_range"
+        app:mcv_showWeekDays="false"
+        app:mcv_tileHeight="40dp"
+        app:mcv_weekDayTextAppearance="@style/texto_color_normal" />
+
+
+    <Button
+        android:id="@+id/actPrincipalGrupoButtonNuevoFestivo"
+        style="@style/boton_blanco_negro"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/lexend_medium"
+        android:text="@string/nuevo_festivo"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

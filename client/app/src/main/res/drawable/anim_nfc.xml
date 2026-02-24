@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/anim_nfc_01" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_02" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_03" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_04" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_05" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_06" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_07" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_08" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_09" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_10" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_11" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_12" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_13" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_14" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_15" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_16" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_17" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_18" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_19" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_20" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_21" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_22" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_23" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_24" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_25" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_26" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_27" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_28" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_29" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_30" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_31" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_32" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_33" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_34" android:duration="100" />
+    <item android:drawable="@drawable/anim_nfc_35" android:duration="100" />
+</animation-list>

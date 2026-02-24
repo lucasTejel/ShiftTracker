@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/anim_success_01" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_02" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_03" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_04" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_05" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_06" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_07" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_08" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_09" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_10" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_11" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_12" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_13" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_14" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_15" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_16" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_17" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_18" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_19" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_20" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_21" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_22" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_23" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_24" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_25" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_26" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_27" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_28" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_29" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_30" android:duration="50" />
+    <item android:drawable="@drawable/anim_success_31" android:duration="500" />
+</animation-list>
