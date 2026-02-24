@@ -24,7 +24,7 @@ ShiftTracker/
 ## Tecnologías
 
 ### Cliente (Android)
-- **Lenguaje**: Kotlin
+- **Lenguaje**: Java
 - **UI**: Jetpack Compose + Material Design 3
 - **Arquitectura**: MVVM con ViewBinding
 - **Dependencias**:
@@ -45,7 +45,7 @@ ShiftTracker/
 
 ### Cliente
 - Android SDK 29+ (Android 10)
-- Android Studio con soporte para Kotlin
+- Android Studio con soporte para Java
 
 ### Servidor
 - Java JDK 8+
