@@ -1,92 +1,99 @@
 # ShiftTracker
 
-Aplicación móvil Android para la gestión y seguimiento de asistencias, turnos y grupos de actividades.
+ShiftTracker es una aplicación pensada para simplificar el control de asistencia en organizaciones utilizando tecnología NFC.
+La idea surgió al observar que muchos sistemas de fichaje siguen siendo lentos, poco intuitivos o fáciles de manipular.
 
-## Descripción
+Con esta aplicación, un usuario solo tiene que acercar una etiqueta NFC a su dispositivo para registrar su entrada o salida. El objetivo es que el proceso sea rápido, claro y difícil de falsificar.
 
-ShiftTracker es una solución completa cliente-servidor que permite:
+Este proyecto fue desarrollado como proyecto final del ciclo **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
 
-- **Gestión de usuarios**: Usuarios comunes y administradores con diferentes permisos
-- **Gestión de grupos**: Crear y administrar grupos de actividades (yoga, senderismo, cocina, etc.)
-- **Control de asistencias**: Registro de entradas y seguimiento de participación
-- **Periodos festivos y vacacionales**: Configuración de días no laborables por grupo o usuario
-- **Notificaciones**: Sistema de alertas para administradores
+---
 
-## Arquitectura
+# Motivación del proyecto
 
-```
-ShiftTracker/
-├── client/          # Aplicación Android Java
-├── server/          # Servidor Java con sockets
-└── sentencias.sql   # Script de base de datos MySQL
-```
+En muchos entornos todavía se utilizan hojas de firmas, tarjetas manuales o sistemas digitales poco cómodos para registrar la asistencia.
 
-## Tecnologías
+Quería construir algo que:
 
-### Cliente (Android)
-- **Lenguaje**: Java
-- **UI**: Jetpack Compose + Material Design 3
-- **Arquitectura**: MVVM con ViewBinding
-- **Dependencias**:
-  - AndroidX Navigation
-  - WorkManager para tareas en segundo plano
-  - Material CalendarView
+* fuera sencillo de usar
+* funcionara desde un móvil
+* redujera el tiempo necesario para fichar
+* evitara problemas de fraude o errores
 
-### Servidor
-- **Lenguaje**: Java
-- **Comunicación**: Sockets TCP/IP
-- **Patrón**: DAO (Data Access Object)
+La tecnología NFC encajaba perfectamente con este objetivo.
 
-### Base de Datos
-- **Motor**: MySQL
-- **Tablas principales**: usuarios, grupos, asistencias, periodos_festivos, periodos_vacacionales
+---
 
-## Requisitos
+# Cómo funciona
 
-### Cliente
-- Android SDK 29+ (Android 10)
-- Android Studio con soporte para Java
+El sistema se basa en tres elementos principales:
 
-### Servidor
-- Java JDK 8+
-- MySQL Server
+**1. Usuario**
 
-## Instalación
+Cada usuario tiene asociada una etiqueta NFC.
 
-### Base de Datos
-1. Crear una base de datos MySQL
-2. Ejecutar el script `sentencias.sql` para crear las tablas e insertar datos de prueba
+**2. Dispositivo**
 
-### Servidor
-1. Importar el proyecto en tu IDE Java
-2. Configurar la conexión a la base de datos en la clase DAO
-3. Ejecutar `Servidor.java`
+Un dispositivo Android con NFC detecta la etiqueta cuando se acerca al teléfono.
 
-### Cliente Android
-1. Abrir la carpeta `client/` en Android Studio
-2. Configurar la IP del servidor en la aplicación
-3. Compilar y ejecutar en un dispositivo/emulador Android
+**3. Registro**
 
-## Estructura del Proyecto
+La aplicación registra automáticamente el fichaje y lo guarda en el sistema.
 
-### Cliente
-```
-client/app/src/
-├── main/
-│   ├── java/com/example/shifttracker/
-│   └── res/
-```
+De esta manera el proceso completo dura apenas unos segundos.
 
-### Servidor
-```
-server/src/com/example/shifttracker/
-├── conexion_servidor/   # Manejo de conexiones socket
-├── controlador/         # Lógica de negocio
-├── dao/                 # Acceso a datos
-└── pojo/                # Entidades (Usuario, Grupo, etc.)
-```
+---
 
-## Documentación
+# Funcionalidades principales
 
-- `Memoria ShiftTracker App.pdf` - Documentación técnica completa
-- `Presentación.pptx` - Presentación del proyecto
+### Registro de asistencia con NFC
+
+Los usuarios pueden registrar su entrada o salida acercando su etiqueta NFC al dispositivo.
+
+### Gestión de usuarios
+
+El sistema permite registrar y administrar usuarios dentro de la aplicación.
+
+### Visualización de asistencia
+
+Los registros de asistencia pueden consultarse de forma clara, permitiendo ver cuándo ha fichado cada usuario.
+
+### Interfaz simple
+
+Se buscó mantener una interfaz clara y fácil de usar para evitar confusiones.
+
+---
+
+# Arquitectura del proyecto
+
+La aplicación sigue una estructura modular típica de aplicaciones Android:
+
+* Capa de interfaz de usuario
+* Lógica de negocio
+* Gestión de almacenamiento de datos
+* Integración con NFC
+
+Esto facilita que el proyecto pueda ampliarse en el futuro con nuevas funcionalidades.
+
+---
+
+# Capturas de la aplicación
+
+## Pantalla principal
+
+![Pantalla principal](<img width="309" height="692" alt="image" src="https://github.com/user-attachments/assets/325dbeaf-9791-464a-aa65-49f3e87c00f9" />)
+
+## Registro de asistencia
+
+![Registro NFC](<img width="237" height="522" alt="image" src="https://github.com/user-attachments/assets/91773891-bfd6-43ad-9f6f-c38b2727dc95" />)
+
+## Historial de fichajes
+
+![Historial](<img width="311" height="688" alt="image" src="https://github.com/user-attachments/assets/839a40e8-b001-4499-9b56-059c974b1858" />)
+
+---
+
+# Tecnologías utilizadas
+
+* Android
+* Java
