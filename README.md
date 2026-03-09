@@ -1,99 +1,117 @@
 # ShiftTracker
 
-ShiftTracker es una aplicación pensada para simplificar el control de asistencia en organizaciones utilizando tecnología NFC.
-La idea surgió al observar que muchos sistemas de fichaje siguen siendo lentos, poco intuitivos o fáciles de manipular.
+ShiftTracker is a mobile application designed to simplify attendance tracking using NFC technology.
 
-Con esta aplicación, un usuario solo tiene que acercar una etiqueta NFC a su dispositivo para registrar su entrada o salida. El objetivo es que el proceso sea rápido, claro y difícil de falsificar.
+The idea behind the project came from noticing that many attendance systems are still slow, inconvenient, or easy to manipulate. ShiftTracker aims to make the process faster and more reliable by allowing users to register their attendance simply by scanning an NFC tag with their phone.
 
-Este proyecto fue desarrollado como proyecto final del ciclo **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
-
----
-
-# Motivación del proyecto
-
-En muchos entornos todavía se utilizan hojas de firmas, tarjetas manuales o sistemas digitales poco cómodos para registrar la asistencia.
-
-Quería construir algo que:
-
-* fuera sencillo de usar
-* funcionara desde un móvil
-* redujera el tiempo necesario para fichar
-* evitara problemas de fraude o errores
-
-La tecnología NFC encajaba perfectamente con este objetivo.
+This project was developed as my final project for the **Multiplatform Application Development (DAM)** program.
 
 ---
 
-# Cómo funciona
+# Motivation
 
-El sistema se basa en tres elementos principales:
+In many organizations, attendance tracking still relies on manual processes like paper sheets, physical punch cards, or complicated digital systems.
 
-**1. Usuario**
+I wanted to build something that would be:
 
-Cada usuario tiene asociada una etiqueta NFC.
+* simple to use
+* quick for users
+* easy to manage
+* harder to manipulate or falsify
 
-**2. Dispositivo**
-
-Un dispositivo Android con NFC detecta la etiqueta cuando se acerca al teléfono.
-
-**3. Registro**
-
-La aplicación registra automáticamente el fichaje y lo guarda en el sistema.
-
-De esta manera el proceso completo dura apenas unos segundos.
+NFC technology provided a simple and practical way to achieve this.
 
 ---
 
-# Funcionalidades principales
+# How it works
 
-### Registro de asistencia con NFC
+The system is based on a simple interaction between three components.
 
-Los usuarios pueden registrar su entrada o salida acercando su etiqueta NFC al dispositivo.
+**User**
 
-### Gestión de usuarios
+Each user is associated with an NFC tag.
 
-El sistema permite registrar y administrar usuarios dentro de la aplicación.
+**Device**
 
-### Visualización de asistencia
+An Android device with NFC detects the tag when it is placed near the phone.
 
-Los registros de asistencia pueden consultarse de forma clara, permitiendo ver cuándo ha fichado cada usuario.
+**Attendance record**
 
-### Interfaz simple
+The application automatically records the check-in or check-out and stores it in the system.
 
-Se buscó mantener una interfaz clara y fácil de usar para evitar confusiones.
-
----
-
-# Arquitectura del proyecto
-
-La aplicación sigue una estructura modular típica de aplicaciones Android:
-
-* Capa de interfaz de usuario
-* Lógica de negocio
-* Gestión de almacenamiento de datos
-* Integración con NFC
-
-Esto facilita que el proyecto pueda ampliarse en el futuro con nuevas funcionalidades.
+The whole process takes only a few seconds.
 
 ---
 
-# Capturas de la aplicación
+# Main Features
 
-## Pantalla principal
+### NFC-based attendance tracking
+
+Users can register their attendance by scanning their NFC tag with the device.
+
+### User management
+
+The system allows administrators to create and manage users within the application.
+
+### Attendance history
+
+Attendance records can be reviewed easily to see when users checked in or out.
+
+### Simple interface
+
+The interface was designed to be clear and easy to use, minimizing friction during the check-in process.
+
+---
+
+# Application Screenshots
+
+## Main screen
 
 ![Pantalla principal](<img width="309" height="692" alt="image" src="https://github.com/user-attachments/assets/325dbeaf-9791-464a-aa65-49f3e87c00f9" />)
 
-## Registro de asistencia
+## NFC check-in
 
 ![Registro NFC](<img width="237" height="522" alt="image" src="https://github.com/user-attachments/assets/91773891-bfd6-43ad-9f6f-c38b2727dc95" />)
 
-## Historial de fichajes
+## Attendance history
 
 ![Historial](<img width="311" height="688" alt="image" src="https://github.com/user-attachments/assets/839a40e8-b001-4499-9b56-059c974b1858" />)
 
 ---
 
-# Tecnologías utilizadas
+# Technologies Used
+
+This project was built using:
 
 * Android
 * Java
+* NFC (Near Field Communication)
+* SQLite
+
+---
+
+# Possible Future Improvements
+
+Some ideas for future development include:
+
+* Cloud synchronization
+* Web dashboard for administrators
+* Advanced reporting and analytics
+* Multi-device synchronization
+* Integration with company management systems
+
+---
+
+# Repository
+
+GitHub repository:
+https://github.com/lucasTejel/ShiftTracker
+
+---
+
+# Author
+
+Lucas Tejel
+
+If you are interested in the project or have suggestions for improvements, feel free to open an issue or contact me.
+
